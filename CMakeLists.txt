@@ -23,10 +23,10 @@ target_compile_options(Everything-SDK PRIVATE
     "/DUNICODE"
     "/utf-8"
     "/EHsc"
-    "$<$<CONFIG:RELEASE>:/MD>"
-    "$<$<CONFIG:DEBUG>:/MDd>"
-    "$<$<CONFIG:RELEASE>:/O2>"
-    "$<$<CONFIG:DEBUG>:/Od>"
+    "$<$<CONFIG:Relase>:/MD>"
+    "$<$<CONFIG:Debug>:/MDd>"
+    "$<$<CONFIG:RelWithDebInfo>:/MDd>"
+    "$<$<CONFIG:MinSizeRel>:/Md>"
 )
 
 target_link_options(Everything-SDK PRIVATE
@@ -51,10 +51,10 @@ target_compile_options(test PRIVATE
     "/DUNICODE"
     "/utf-8"
     "/EHsc"
-    "$<$<CONFIG:RELEASE>:/MD>"
-    "$<$<CONFIG:DEBUG>:/MDd>"
-    "$<$<CONFIG:RELEASE>:/O2>"
-    "$<$<CONFIG:DEBUG>:/Od>"
+    "$<$<CONFIG:Relase>:/MD>"
+    "$<$<CONFIG:Debug>:/MDd>"
+    "$<$<CONFIG:RelWithDebInfo>:/MDd>"
+    "$<$<CONFIG:MinSizeRel>:/Md>"
 )
 target_link_libraries(test PRIVATE
     Everything-SDK
